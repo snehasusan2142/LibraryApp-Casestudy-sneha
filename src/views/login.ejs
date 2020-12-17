@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+        <script src="https://kit.fontawesome.com/1c2c2462bf.js"></script>
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <%for(i=0;i<nav.length;i++){%>
+
+        <li>
+          
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+        <%}%>
+      
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+       
+        <li><a href="signin">SignIn</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>SignUp with Us!
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <!-- <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+  
+            <div class="container login-container">
+                <div class="row">
+                  <div class="col-lg-2 l"> </div>
+                    <div class="col-lg-8 centered login-form-1">
+                        <h3>Sign Up</h3>
+<!--               
+                        <% if(typeof errors != 'undefined'){ %> <% errors.forEach(function(error) { %>
+                          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <%= error.msg %>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <% }); %> <% } %>
+              -->
+                      
+                        <form action="/login" method="POST" onsubmit="return!!(CheckPassword()&phonenumber()&ValidateEmail()&confirmpass())">
+                    
+                            <div class="form-row" id="myForm">
+                                <div class="form-group col-md-6">
+                                  <label for="formGroupExampleInput">First name</label>
+                                  <input type="text" class="form-control" class="formGroupExampleInput" placeholder="First Name" name="firstname">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="formGroupExampleInput">Second name</label>
+                                  <input type="text" class="form-control" class="formGroupExampleInput2" placeholder="Second Name" name="secondname">
+                                </div>
+                              </div>
+                
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" onkeyup="ValidateEmail()" name="email">
+                                <span id="error1"></span> 
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="inputPassword4" >Phone number</label>
+                                <input type="text" class="form-control" id="inputPhone" onkeyup="phonenumber()" name="phone">
+                                <span id="error2"></span> 
+                              
+                              </div>
+                            </div>
+                 
+                            <div class="form-group">
+                            
+                                         <label for="passwordInput" class="col-md-12  control-label"> <b>Password</b> </label>
+                                         <div class="col-md-12">
+                                          <input type="password" class="form-control" id="password" name ="passwordInput1" placeholder="Enter your Password" onkeyup="checkstrenght();CheckPassword()" >
+                                          <span id="error3"></span> 
+                                          <input type="checkbox" onclick="myFunction()" id="myInputcheck">  Show password </input>
+                                          <div id="popover-password">
+                                            <p><span id="result"></span></p>
+                                            <div class="progress">
+                                              <div class="progress-bar" id="password-strength" role="progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" style="width: 0%;"></div>
+                                              
+                                             </div>
+
+                                          </div>
+                                        
+                                          <ul class="list-unstyled">
+                                           
+                                            <li>
+                                              <span class="low-upper-case">
+                                                <i class="fas fas1 fa-circle" aria-hidden="true"></i> Lowercase & Uppercase
+                                              </span>
+                                            </li>
+                
+                                            <li>
+                                              <span class="one-number">
+                                                <i class="fas  fas2 fa-circle" aria-hidden="true"></i> Number(0-9)
+                                              </span>
+                                            </li>
+                
+                
+                                            <li>
+                                              <span class="one-special-char">
+                                                <i class="fas fas3 fa-circle" aria-hidden="true"></i> Special character(!@$%&*_)
+                                            </li>
+                
+                
+                                            <li>
+                                              <span class="eight-character">
+                                                <i class="fas fas4 fa-circle" aria-hidden="true"></i> Atleast 8 character
+                                              </span>
+                                            </li>
+                
+                
+                
+                
+                                          </ul>
+                                        </div>
+                                        
+                                            
+                                         <label for="passwordInput" class="col-md-12  control-label"> <b> Confirm Password</b> </label>
+                                         
+                                         <div class="col-md-12">
+                                          <input type="password" class="form-control" id="conf" name ="passwordInput" placeholder="Enter your Password" onkeyup="confirmpass()" >
+                                          <span id="error4"></span> 
+                
+                                         </div>
+                     
+                            <br>
+                            
+                             <div >
+                               <label for="formGroupExampleInput" id="strengthresult"></label>
+                             </div>
+                           
+                            <br>
+                            <br>
+                       
+                                           
+                            <div class="form-group">
+                                <input type="submit" class="btnSubmit" value="Login" />
+                            </div>
+                            <div class="form-group">
+                                <a href="#" class="ForgetPwd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forget Password?</a>
+                            </div>
+                        </form>
+                        <a href="signin"  class="ForgetPwd">Already a member? Click here</a>
+                    </div>
+                    <div class="col-lg-2 l"> </div>
+                </div>
+                            </div>
+            </div>
+          
+     
+
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <!-- <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>       -->
+      </div>
+    </div>
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+	</body>
+</html>

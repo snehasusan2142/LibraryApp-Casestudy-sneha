@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <%for(i=0;i<nav.length;i++){%>
+
+        <li>
+          
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+        <%}%>
+        
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <li><a href="login">SignUp</a></li>
+        <li><a href="signin">SignIn</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1> <img src="/images/auth/library.png" height="150px" width="150px" alt="">BOOK SHARE
+          <p class="lead">
+             <i>Let the book talk...</i>  </p>
+             <br>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <!-- <div class="well 2well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+         
+              <div >
+                <img class="d-block w-100" src="/images/auth/librarypicc.jpg" height="450px" width="1110px"
+                  alt="First slide">
+              </div>
+              <hr>
+              <div class="bttgroup">
+                <h2 class="btnhead">Study at home</h2>
+              <button type="button" class="btn btn-lg btn-primary">School</button>
+              <button type="button" class="btn btn-lg btn-secondary">Engineering</button>
+              <button type="button" class="btn btn-lg btn-success">Science</button>
+              <button type="button" class="btn btn-lg btn-danger">Humanities</button>
+              <button type="button" class="btn btn-lg btn-warning">Literature</button>
+              <button type="button" class="btn  btn-lg btn-info">Law</button>
+              <button type="button" class="btn btn-lg btn-light">Management</button>
+            
+            </div>
+<hr>
+<div class="covid">
+  Can you chip in? In 2020 BOOK SHARE has seen unprecedented use. When the COVID-19 pandemic hit, our bandwidth demand spiked, as readers everywhere sought out digital resources. We build and maintain all our own systems rather than contracting them out, and right now we’re buying more servers than ever before. We do this without charging for access, selling user data, or running ads; instead, we depend on the generosity of our patrons to fund our infrastructure.
+
+</div>
+<hr>
+<div class="new1">
+  <h2>About Us</h2>
+One web page for every book ever published. It's a lofty but achievable goal.
+
+To build Open Library, we need hundreds of millions of book records, a wiki interface, and lots of people who are willing to contribute their time and effort to building the site.
+
+To date, we have gathered over 20 million records from a variety of large catalogs as well as single contributions, with more on the way.
+ 
+Open Library is an open project: the software is open, the data are open, the documentation is open, and we welcome your contribution. Whether you fix a typo, add a book, or write a widget--it's all welcome. We have a small team of fantastic programmers who have accomplished a lot, but we can't do it alone!
+</div>
+<hr>
+<div class="joinus">
+  Signup withus and explore our unlimited resources. <br><br>
+  <a  class="join" href="/login">Signup</a>
+  <br><br>
+
+</div>
+
+<hr>
+             
+<div >
+  <img class="d-block w-100" src="/images/auth/p1.jpg" height="450px" width="1110px"
+    alt="First slide">
+</div>
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right"></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
